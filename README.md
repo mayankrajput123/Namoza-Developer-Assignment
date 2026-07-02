@@ -33,7 +33,7 @@ Includes:
 
 **Location:** `task2/index.html`
 
-**PageSpeed Screenshot:** `task2/Pagespeed-mobile`
+**PageSpeed Screenshots:** `task2/Pagespeed-mobile`
 
 ---
 
