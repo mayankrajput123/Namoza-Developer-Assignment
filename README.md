@@ -1,53 +1,66 @@
-# Namoza-Developer-Assignment
+# Namoza Developer Assignment
 
 **Candidate:** Mayank Rajput
 
 This repository contains my submission for the Namoza Developer Assignment.
 
+---
+
 ## Repository Structure
 
-### Task 1
+### Task 1 – GTM Event Schema
+
+Includes:
+
 - GTM Event Schema
 - Booking Funnel Tracking
-- dataLayer JSON
+- dataLayer JSON Snippets
 - Google Ads Conversion Explanation
 
-Location:
-```
-task1/schema.md
-```
+**Location:** `task1/schema.md`
 
-### Task 2
+---
+
+### Task 2 – Landing Page
+
+Includes:
+
 - Responsive Landing Page
-- HTML + CSS + Vanilla JavaScript
+- HTML, CSS & Vanilla JavaScript
 - GTM dataLayer Push
 - Thank You State
-- PageSpeed Screenshot
+- PageSpeed Insights Screenshot
 
-Location:
-```
-task2/index.html
-```
+**Location:** `task2/index.html`
 
-### Task 3
-- Integration Architecture
+**PageSpeed Screenshot:** `task2/pagespeed-mobile.png`
+
+---
+
+### Task 3 – Integration Design
+
+Includes:
+
 - HubSpot CRM Integration
 - Karix WhatsApp API
-- Google Ads Conversion
+- Google Ads Conversion Flow
 - Failure Handling
 - SLA Monitoring
 
-Location:
-```
-task3/integration.md
-```
+**Location:** `task3/integration.md`
+
+---
 
 ## Technologies Used
 
 - HTML5
 - CSS3
-- Vanilla JavaScript
-- Google Tag Manager
-- Google Analytics 4
+- JavaScript (Vanilla)
+- Google Tag Manager (GTM)
+- Google Analytics 4 (GA4)
 - HubSpot CRM API
 - Karix WhatsApp Business API
+
+---
+
+Thank you for reviewing my submission.
