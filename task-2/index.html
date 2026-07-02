@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OrthoNow | Book Your Orthopaedic Consultation</title>
+
+<meta name="description"
+content="Book an expert orthopaedic consultation with OrthoNow. Trusted specialists across Bengaluru with fast appointments for knee, back, shoulder and joint pain.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:Arial,Helvetica,sans-serif;
+background:#f7f9fc;
+color:#1d1d1d;
+line-height:1.6;
+
+}
+
+.container{
+
+width:90%;
+max-width:1180px;
+margin:auto;
+
+}
+
+section{
+
+padding:70px 0;
+
+}
+
+h1,h2,h3{
+
+font-weight:700;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+img{
+
+max-width:100%;
+
+}
+
+/* ========================= */
+
+.hero{
+
+background:linear-gradient(135deg,#0057b8,#0b77ff);
+color:white;
+
+}
+
+.hero-content{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:50px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-left{
+
+flex:1;
+
+}
+
+.hero-right{
+
+flex:1;
+
+}
+
+.hero h1{
+
+font-size:48px;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:18px;
+margin-bottom:25px;
+
+max-width:600px;
+
+}
+
+.btn{
+
+display:inline-block;
+background:#ffb703;
+color:#000;
+padding:16px 35px;
+font-size:18px;
+font-weight:bold;
+border-radius:8px;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#f4a300;
+
+}
+
+/* ===================== */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+margin-top:50px;
+
+}
+
+.stat{
+
+background:white;
+color:#111;
+padding:25px;
+
+border-radius:12px;
+
+text-align:center;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.stat h2{
+
+color:#0057b8;
+
+font-size:32px;
+
+margin-bottom:8px;
+
+}
+
+/* ========================= */
+
+.form-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+.form-card h2{
+
+margin-bottom:15px;
+
+}
+
+.form-group{
+
+margin-bottom:18px;
+
+}
+
+input{
+
+width:100%;
+
+padding:15px;
+
+font-size:16px;
+
+border:1px solid #d8d8d8;
+
+border-radius:8px;
+
+outline:none;
+
+}
+
+input:focus{
+
+border:1px solid #0057b8;
+
+}
+
+.submit-btn{
+
+width:100%;
+
+background:#0057b8;
+
+color:white;
+
+padding:15px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.submit-btn:hover{
+
+background:#00469a;
+
+}
+
+.note{
+
+font-size:13px;
+
+color:#666;
+
+margin-top:12px;
+
+text-align:center;
+
+}
+
+/* ===================== */
+
+.trust{
+
+background:white;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+margin-top:35px;
+
+}
+
+.card{
+
+background:#f7f9fc;
+
+padding:30px;
+
+border-radius:12px;
+
+text-align:center;
+
+transition:.3s;
+
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+}
+
+.card h3{
+
+margin:15px 0;
+
+color:#0057b8;
+
+}
+
+/* ===================== */
+
+.benefits{
+
+background:#eef5ff;
+
+}
+
+.benefit-list{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.benefit{
+
+background:white;
+
+padding:25px;
+
+border-radius:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+}
+
+/* ====================== */
+
+.testimonials{
+
+background:white;
+
+}
+
+.review-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+margin-top:35px;
+
+}
+
+.review{
+
+padding:25px;
+
+background:#f8fbff;
+
+border-left:5px solid #0057b8;
+
+border-radius:10px;
+
+}
+
+/* ====================== */
+
+.footer{
+
+background:#0b2d50;
+
+color:white;
+
+text-align:center;
+
+padding:35px 20px;
+
+}
+
+/* ====================== */
+
+#thankYou{
+
+display:none;
+
+text-align:center;
+
+padding:35px;
+
+background:#e7f8ec;
+
+border-radius:10px;
+
+margin-top:20px;
+
+}
+
+.success{
+
+font-size:22px;
+
+font-weight:bold;
+
+color:#198754;
+
+margin-bottom:10px;
+
+}
+
+/* ====================== */
+
+@media(max-width:900px){
+
+.hero-content{
+
+flex-direction:column;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.review-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.benefit-list{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+    <!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="hero-left">
+
+<h1>Get Expert Relief from Knee & Back Pain</h1>
+
+<p>
+
+Book your consultation with experienced orthopaedic specialists at OrthoNow.
+
+Trusted by thousands of patients across Bengaluru with modern diagnosis,
+
+personalized treatment plans, and convenient appointments.
+
+</p>
+
+<a href="#consultationForm" class="btn">
+
+Book Your Consultation
+
+</a>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>9+</h2>
+
+<p>Clinics Across Bengaluru</p>
+
+</div>
+
+<div class="stat">
+
+<h2>25+</h2>
+
+<p>Experienced Specialists</p>
+
+</div>
+
+<div class="stat">
+
+<h2>15K+</h2>
+
+<p>Successful Consultations</p>
+
+</div>
+
+<div class="stat">
+
+<h2>4.8★</h2>
+
+<p>Average Patient Rating</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="form-card" id="consultationForm">
+
+<h2>Book Your Consultation</h2>
+
+<p style="margin-bottom:20px;color:#666;">
+
+Fill in your details and our care coordinator will contact you shortly.
+
+</p>
+
+<form id="consultation-form">
+
+<div class="form-group">
+
+<input
+
+type="text"
+
+id="name"
+
+placeholder="Full Name"
+
+required
+
+>
+
+</div>
+
+<div class="form-group">
+
+<input
+
+type="tel"
+
+id="phone"
+
+placeholder="Phone Number"
+
+pattern="[0-9]{10}"
+
+maxlength="10"
+
+required
+
+>
+
+</div>
+
+<button
+
+type="submit"
+
+class="submit-btn"
+
+>
+
+Book Consultation
+
+</button>
+
+<p class="note">
+
+Your information is secure and will only be used to schedule your consultation.
+
+</p>
+
+</form>
+
+<div id="thankYou">
+
+<div class="success">
+
+✓ Consultation Request Submitted
+
+</div>
+
+<p>
+
+Thank you for choosing OrthoNow.
+
+Our team will contact you within 30 minutes to confirm your appointment.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TRUST SECTION ================= -->
+
+<section class="trust">
+
+<div class="container">
+
+<h2 style="text-align:center;">
+
+Why Patients Choose OrthoNow
+
+</h2>
+
+<p
+
+style="text-align:center;
+
+max-width:700px;
+
+margin:20px auto;">
+
+Our orthopaedic specialists provide evidence-based treatment for knee pain,
+
+back pain, joint injuries, sports injuries, and arthritis using modern diagnostic
+
+techniques.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Experienced Specialists</h3>
+
+<p>
+
+Our doctors have years of experience treating complex orthopaedic conditions.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Multiple Clinic Locations</h3>
+
+<p>
+
+Conveniently located clinics across Bengaluru for faster appointments.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Patient-Focused Care</h3>
+
+<p>
+
+Personalized treatment plans with transparent consultation and follow-up.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="benefits">
+
+<div class="container">
+
+<h2 style="text-align:center;">
+
+What You Get During Your Consultation
+
+</h2>
+
+<div class="benefit-list">
+
+<div class="benefit">
+
+<h3>✔ Detailed Diagnosis</h3>
+
+<p>
+
+Understand the root cause of your pain with expert evaluation.
+
+</p>
+
+</div>
+
+<div class="benefit">
+
+<h3>✔ Personalized Treatment Plan</h3>
+
+<p>
+
+Receive treatment recommendations tailored to your condition.
+
+</p>
+
+</div>
+
+<div class="benefit">
+
+<h3>✔ Specialist Advice</h3>
+
+<p>
+
+Consult experienced orthopaedic doctors for informed medical guidance.
+
+</p>
+
+</div>
+
+<div class="benefit">
+
+<h3>✔ Follow-Up Support</h3>
+
+<p>
+
+Our care team helps schedule follow-ups and answer your queries.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="testimonials">
+
+<div class="container">
+
+<h2 style="text-align:center;">
+
+Patient Reviews
+
+</h2>
+
+<div class="review-grid">
+
+<div class="review">
+
+★★★★★
+
+<p style="margin-top:15px;">
+
+"I received quick treatment for my knee pain.
+
+The doctor explained everything clearly and the appointment process was smooth."
+
+</p>
+
+<strong>
+
+— Rahul S.
+
+</strong>
+
+</div>
+
+<div class="review">
+
+★★★★★
+
+<p style="margin-top:15px;">
+
+"The consultation was professional and the clinic staff were extremely helpful.
+
+Highly recommended."
+
+</p>
+
+<strong>
+
+— Priya M.
+
+</strong>
+
+</div>
+
+<div class="review">
+
+★★★★★
+
+<p style="margin-top:15px;">
+
+"Easy online booking and experienced specialists.
+
+I was able to resume work much sooner after treatment."
+
+</p>
+
+<strong>
+
+— Arjun K.
+
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="container">
+
+<h3>OrthoNow</h3>
+
+<p>
+
+Expert Orthopaedic Care | Knee Pain | Back Pain | Sports Injuries
+
+</p>
+
+<p style="margin-top:10px;">
+
+© 2026 OrthoNow. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+<script>
+window.dataLayer = window.dataLayer || [];
+
+const form = document.getElementById("consultation-form");
+const thankYou = document.getElementById("thankYou");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+
+    // Basic Validation
+    if (name.length < 3) {
+        alert("Please enter your full name.");
+        return;
+    }
+
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+        alert("Please enter a valid 10-digit Indian mobile number.");
+        return;
+    }
+
+    // GTM DataLayer Event
+    const consultationEvent = {
+        event: "consultation_form_submitted",
+        patient_name: name,
+        phone_number: phone,
+        clinic_location: "Bengaluru",
+        campaign: "Google Ads - Consultation Landing Page",
+        page_name: "Orthopedic Consultation Landing Page",
+        form_name: "Consultation Form",
+        submission_time: new Date().toISOString()
+    };
+
+    window.dataLayer.push(consultationEvent);
+
+    // Console output for Loom demo
+    console.log("===== GTM dataLayer Push =====");
+    console.log(consultationEvent);
+    console.log("Current dataLayer:", window.dataLayer);
+
+    // Hide form and show thank-you state
+    form.style.display = "none";
+    thankYou.style.display = "block";
+
+    // Optional: scroll to thank-you message
+    thankYou.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+});
+</script>
+
+</body>
+</html>
